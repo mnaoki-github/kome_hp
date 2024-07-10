@@ -1,6 +1,25 @@
 @charset "utf-8";
 
-body {
-    color:red;
-    background-color: green;
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:0;
+    padding: 0;
+    color:#202124;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity:0.7;
+}
+
+ul,li {
+    list-style-type: none;
+}
+
+img {
+    max-width:100%;
+}
+
