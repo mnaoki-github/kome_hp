@@ -1,44 +1,179 @@
 @charset "utf-8";
 
-* {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin:0;
-    padding: 0;
-    color:#202124;
 
+/* initialize */
+:root {
+    --max-contents-widht: 1280px;
+}
+
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
 }
 
 html {
     font-size: 100%;
+
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+small {
+    font-size: 10px;
+    color: #777;
+
 }
 
 a {
     text-decoration: none;
-}
-a:hover {
-    opacity:0.7;
+    display: block;
 }
 
-ul,li {
+a:hover {
+    color: #aaa;
+}
+
+ul {
     list-style-type: none;
 }
 
-img {
-    max-width:100%;
+li {
+    display: inline;
 }
 
-/* table */
+
+img {
+    width: 100%;
+    max-width: var(--max-contents-widht);
+    vertical-align: bottom;
+}
+
+/* tableあとで分ける */
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    width: 100%;
+    font-size: 16px;
 }
+
 th {
     font-weight: normal;
+    border-right: 1px solid #333;
+    background-color: #eee;
+
+}
+th:last-child{
+    border-right: none;
+}
+
+tr {
+    line-height: 1.5;
+    border-top: 1px solid #333; 
+    border-bottom:1px solid #333;
+}
+
+
+/* common */
+.container {
+    max-width: var(--max-contents-widht);
+    padding: 2px 8px 0;
+    margin: 0 auto;
+}
+
+.title-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list a {
+    font-size: 1rem;
+    line-height: 2;
+    padding: 0 4px;
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin: 80px 0 0;
+}
+
+/* index */
+.main-visual img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* profile */
+.profile-contents {
+    margin:0 auto;
+    text-align: center;
+}
+.profile-contents .table{
+margin-top:16px;
+}
+.profile-contents .table th{
+ width: 100px;
 }
 
 
 
 
-@media screen and (min-width:992px) {
-    /* max-width:1080px; */
+@media screen and (min-width:431px) {
+
+    /* common */
+    .nav-list li:hover {
+        background-color: #eee;
+    }
+
+    /* index; */
+
+    .main-visual img {
+        object-fit: cover;
+        height: 300px;
+    }
+
+
+    /* profile */
+    .profile-contents {
+        display: flex;
+        gap: 16px;
+    }
+
+    .profile-contents img {
+        max-width: 600px;
+    }
+
+    .profile-contents table {
+        min-width: 400px;
+    }
+
+    .profile-contents .table{
+        margin-top:0;
+        }
 }
