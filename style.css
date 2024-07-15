@@ -1,14 +1,12 @@
 @charset "utf-8";
 
-
 /* initialize */
 :root {
     --max-contents-widht: 1280px;
 }
 
-
 * {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,6 +15,7 @@
 
 html {
     font-size: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
 
 }
 
@@ -74,18 +73,11 @@ table {
 
 th {
     font-weight: normal;
-    border-right: 1px solid #333;
-    background-color: #eee;
-
-}
-th:last-child{
-    border-right: none;
 }
 
 tr {
-    line-height: 1.5;
-    border-top: 1px solid #333; 
-    border-bottom:1px solid #333;
+    line-height: 2;
+    border-bottom: 1px dotted #333;
 }
 
 
@@ -131,14 +123,16 @@ footer {
 
 /* profile */
 .profile-contents {
-    margin:0 auto;
+    margin: 0 auto;
     text-align: center;
 }
-.profile-contents .table{
-margin-top:16px;
+
+.profile-contents .table {
+    margin-top: 16px;
 }
-.profile-contents .table th{
- width: 100px;
+
+.profile-contents .table th {
+    width: 100px;
 }
 
 
@@ -173,7 +167,7 @@ margin-top:16px;
         min-width: 400px;
     }
 
-    .profile-contents .table{
-        margin-top:0;
-        }
+    .profile-contents .table {
+        margin-top: 0;
+    }
 }
