@@ -10,7 +10,7 @@ const today =new Date();
 const y = today.getFullYear() - birthday.getFullYear()
 let m = today.getMonth() - birthday.getMonth()
 
-if (today.getDay() < birthday.getDate()) {
+if (today.getDate() < birthday.getDate()) {
     m--;
 }
 
