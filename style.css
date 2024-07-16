@@ -179,5 +179,6 @@ footer {
 
     .profile-contents .table {
         margin-top: 0;
+        padding-top:0;
     }
 }
