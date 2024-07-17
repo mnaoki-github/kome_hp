@@ -37,7 +37,6 @@ h3 {
 small {
     font-size: 10px;
     color: #777;
-
 }
 
 a {
@@ -173,11 +172,8 @@ footer {
         max-width: 600px;
     }
 
-    .profile-contents table {
-        min-width: 300px;
-    }
-
     .profile-contents .table {
-        margin-top: 0;
+        min-width: 300px;
+        padding-top: 0;
     }
 }
