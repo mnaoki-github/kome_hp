@@ -34,6 +34,10 @@ h3 {
     font-weight: normal;
 }
 
+p {
+    font-size: 0.8rem;
+}
+
 small {
     font-size: 10px;
     color: #777;
@@ -42,7 +46,7 @@ small {
 a {
     text-decoration: none;
     display: block;
-    color:inherit
+    color: inherit
 }
 
 a:hover {
@@ -57,10 +61,9 @@ li {
     display: inline;
 }
 
-
 img {
     width: 100%;
-    max-width: var(--max-contents-widht);
+    /* max-width: var(--max-contents-widht); */
     vertical-align: bottom;
 }
 
@@ -82,22 +85,26 @@ tr {
 }
 
 /* common */
-.header {
-    background-color: #eda65f  ;
-    color:#fff;
-}
-
 .container {
     max-width: var(--max-contents-widht);
-    padding: 0 16px ;
+    padding: 0 16px;
     margin: 0 auto;
 }
 
+.title-wrapper {
+    background-color: #eda65f;
+    width: 100%;
+}
+
 .title-inner {
+    max-width: var(--max-contents-widht);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    color: #fff;
+    padding: 0 16px;
+    margin: 0 auto;
 }
 
 .nav-list {
@@ -117,7 +124,29 @@ header {
 
 footer {
     text-align: center;
-    margin: 80px 0 0;
+    margin: 80px 0 16px;
+    padding-top:16px;
+    border-top:1px solid#eee;
+}
+
+.sns-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.twitter,
+.github {
+    font-size: 2rem;
+    /* color: #eda65f; */
+}
+
+.room img {
+    height: 2rem;
+    object-fit: contain;
+}
+.room img:hover {
+    opacity: 0.7;
 }
 
 /* index */
@@ -127,11 +156,17 @@ footer {
     object-fit: cover;
 }
 
+.about,
+.news,
+.photo {
+    margin-top:32px;
+}
+
 /* profile */
 .profile-contents {
     margin: 0 auto;
     text-align: center;
-    padding:32px 16px 0;
+    padding: 32px 0 0;
 }
 
 .profile-contents .table {
@@ -142,8 +177,7 @@ footer {
     width: 100px;
 }
 
-
-@media screen and (min-width:431px) {
+@media screen and (min-width:768px) {
 
     /* common */
     .nav-list li:hover {
@@ -161,7 +195,6 @@ footer {
         height: 300px;
     }
 
-
     /* profile */
     .profile-contents {
         display: flex;
@@ -173,7 +206,7 @@ footer {
     }
 
     .profile-contents .table {
-        min-width: 300px;
+        min-width: 50%;
         padding-top: 0;
     }
 }
