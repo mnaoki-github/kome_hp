@@ -135,10 +135,26 @@ footer {
     justify-content: center;
 }
 
-.twitter,
-.github {
+.fa-square-x-twitter,
+.fa-square-github {
     font-size: 2rem;
-    /* color: #eda65f; */
+}
+
+.fa-x-twitter {
+    font-size: 1.5rem;
+    line-height: 33.5px;
+}
+
+.share {
+    display: block;
+    margin: 2px auto;
+    width: 100px;
+    border:1.5px solid rgb(51, 51, 51);
+    border-radius: 4px;
+}
+
+.room {
+    width: auto;
 }
 
 .room img {
@@ -162,11 +178,23 @@ footer {
     margin-top:32px;
 }
 
+.visual-images {
+    display: flex;
+    gap:8px;
+    overflow: scroll;
+}
+
+
+.visual-image img{
+    width: 300px;
+}
+
+
 /* profile */
 .profile-contents {
     margin: 0 auto;
     text-align: center;
-    padding: 32px 0 0;
+    padding: 16px 0 0;
 }
 
 .profile-contents .table {
