@@ -184,7 +184,6 @@ footer {
     overflow: scroll;
 }
 
-
 .visual-image img{
     width: 300px;
 }
@@ -203,6 +202,16 @@ footer {
 
 .profile-contents .table th {
     width: 100px;
+}
+
+.growth-images {
+    display: flex;
+    gap:8px;
+    overflow: scroll;
+}
+
+.growth-image img{
+    width: 200px;
 }
 
 @media screen and (min-width:768px) {
