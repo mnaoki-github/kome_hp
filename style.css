@@ -141,23 +141,24 @@ footer {
 }
 
 .fa-x-twitter {
-    font-size: 1.5rem;
-    line-height: 33.5px;
+    font-size: 1.4rem;
+    line-height: 28px;
 }
 
 .share {
     display: block;
-    margin: 2px auto;
+    margin: 8px auto;
     width: 100px;
     border:1.5px solid rgb(51, 51, 51);
     border-radius: 4px;
 }
 
 .room {
-    width: auto;
+    width: 172.8px;
 }
 
 .room img {
+    width: 100%;
     height: 2rem;
     object-fit: contain;
 }
