@@ -94,7 +94,13 @@ tr {
 .title-wrapper {
     background-color: #eda65f;
     width: 100%;
+    position:fixed;
 }
+
+.title-spacer {
+    height: 50px;
+}
+
 
 .title-inner {
     max-width: var(--max-contents-widht);
@@ -179,6 +185,17 @@ footer {
     margin-top:32px;
 }
 
+.news ul li {
+    display: flex;
+}
+
+.news-date {
+    width:128px;
+}
+.news-title {
+    width: 100%;
+}
+
 .visual-images {
     display: flex;
     gap:8px;
@@ -209,10 +226,12 @@ footer {
     display: flex;
     gap:8px;
     overflow: scroll;
+    justify-content: space-between;
 }
 
 .growth-image img{
-    width: 200px;
+    min-width: 200px;
+    max-width: 300px;
 }
 
 @media screen and (min-width:768px) {
