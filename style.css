@@ -94,7 +94,7 @@ tr {
 .title-wrapper {
     background-color: #eda65f;
     width: 100%;
-    position:fixed;
+    position: fixed;
 }
 
 .title-spacer {
@@ -131,8 +131,8 @@ header {
 footer {
     text-align: center;
     margin: 80px 0 16px;
-    padding-top:16px;
-    border-top:1px solid#eee;
+    padding-top: 16px;
+    border-top: 1px solid#eee;
 }
 
 .sns-links {
@@ -153,7 +153,7 @@ footer {
 
 .share {
     display: block;
-    border:1px solid rgb(51, 51, 51);
+    border: 1px solid rgb(51, 51, 51);
     border-radius: 4px;
 }
 
@@ -166,6 +166,7 @@ footer {
     height: 2rem;
     object-fit: contain;
 }
+
 .room img:hover {
     opacity: 0.7;
 }
@@ -179,8 +180,8 @@ footer {
 
 .about,
 .news,
-.photo{
-    margin-top:16px;
+.photo {
+    margin-top: 16px;
 }
 
 .news ul li {
@@ -188,19 +189,20 @@ footer {
 }
 
 .news-date {
-    width:128px;
+    width: 128px;
 }
+
 .news-title {
     width: 100%;
 }
 
 .visual-images {
     display: flex;
-    gap:8px;
+    gap: 8px;
     overflow: scroll;
 }
 
-.visual-image img{
+.visual-image img {
     width: 300px;
 }
 
@@ -221,20 +223,71 @@ footer {
 }
 
 .container.growth {
-    margin-top:16px;
+    margin-top: 16px;
 }
 
 .growth-images {
     display: flex;
-    gap:8px;
+    gap: 8px;
     overflow: scroll;
     justify-content: space-between;
 }
 
-.growth-image img{
+.growth-image img {
     min-width: 200px;
     max-width: 300px;
 }
+
+
+/* .blog */
+.blog-inner h2 {
+    margin-top: 16px;
+}
+
+.blog-inner a {
+    display: flex;
+    gap: 4%;
+}
+
+.blog-inner li {
+    display: block;
+    line-height: 2;
+    border-bottom: 1px dotted #aaa;
+}
+
+.blog.container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.blog-inner {
+    width: 100%;
+}
+
+.blog-ad {
+    margin-top: 16px;
+}
+
+/* policy */
+.policy.container h2 {
+    margin-top: 16px;
+}
+.policy-content h3 {
+    font-size: 1rem;
+    border-bottom: 1px solid #aaa;
+}
+
+.policy-content {
+    background-color: #eee;
+    padding:8px;
+    border-radius: 8px;
+}
+
+.policy-content a {
+    color: blue;
+    text-decoration: underline;
+}
+
 
 @media screen and (min-width:768px) {
 
@@ -267,5 +320,19 @@ footer {
     .profile-contents .table {
         min-width: 50%;
         padding-top: 0;
+    }
+
+
+    /* blog */
+ 
+    .blog.container {
+        display: flex;
+        flex-direction:unset;
+    }
+
+
+    .blog-ad {
+        width: 400px;
+        margin-top: 16px;
     }
 }
