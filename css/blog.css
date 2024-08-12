@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.blog-inner {
+    background-color: #eee;
+    padding: 16px;
+    border-radius: 32px;
+}
+
+.blog-inner p {
+    margin-top: 1rem;
+    background-color: ;
+}
+
+.blog-title {
+    border-bottom: 1px solid #aaa;
+}
+
+.blog-img {
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+    .blog-img {
+        margin-left:0 ;        
+    }
+}
