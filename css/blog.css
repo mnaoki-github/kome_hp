@@ -8,7 +8,6 @@
 
 .blog-inner p {
     margin-top: 1rem;
-    background-color: ;
 }
 
 .blog-title {
@@ -17,8 +16,13 @@
 
 .blog-img {
     display: block;
-    width: 400px;
+    width: 100%;
     margin: 0 auto;
+}
+
+.blog-img img {
+    width:100%;
+    max-width: 400px;
 }
 
 @media screen and (min-width:768px) {
