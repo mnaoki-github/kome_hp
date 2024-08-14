@@ -13,7 +13,7 @@
 
 html {
     font-size: 100%;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'M PLUS Rounded 1c','Noto Sans JP', sans-serif;
 }
 
 body {
@@ -143,7 +143,8 @@ footer {
 }
 
 .fa-square-x-twitter,
-.fa-square-github {
+.fa-square-github,
+.fa-square-instagram {
     font-size: 2rem;
 }
 
