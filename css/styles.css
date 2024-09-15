@@ -3,6 +3,8 @@
 /* initialize */
 :root {
     --max-contents-widht: 1280px;
+    --header-height: 50px;
+    --site-color: #EDA65F;
 }
 
 * {
@@ -13,44 +15,16 @@
 
 html {
     font-size: 100%;
-    font-family: 'M PLUS Rounded 1c','Noto Sans JP', sans-serif;
+    font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
 }
 
 body {
     color: #333;
 }
 
-h1 {
-    font-weight: normal;
-    font-size: 1.8rem;
-}
-
-h2 {
-    font-weight: normal;
-    font-size: 1.4rem;
-}
-
-h3 {
-    font-weight: normal;
-}
-
-p {
-    font-size: 0.8rem;
-}
-
-small {
-    font-size: 10px;
-    color: #777;
-}
-
 a {
     text-decoration: none;
-    display: block;
-    color: inherit
-}
-
-a:hover {
-    color: #aaa;
+    color: #333;
 }
 
 ul {
@@ -63,297 +37,392 @@ li {
 
 img {
     width: 100%;
-    /* max-width: var(--max-contents-widht); */
     vertical-align: bottom;
 }
 
-/* tableあとで分ける */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    font-size: 0.8rem;
-}
-
-th {
-    font-weight: normal;
-}
-
-tr {
-    line-height: 2;
-    border-bottom: 1px dotted #333;
-}
-
-/* common */
-.container {
-    max-width: var(--max-contents-widht);
-    padding: 0 16px;
-    margin: 0 auto;
-}
-
-.title-wrapper {
-    background-color: #eda65f;
-    width: 100%;
-    position: fixed;
-}
-
-.title-spacer {
-    height: 50px;
-}
-
-
-.title-inner {
-    max-width: var(--max-contents-widht);
+/* header */
+header {
     display: flex;
     justify-content: space-between;
+    padding: 8px;
     align-items: center;
-    height: 50px;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--site-color);
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+header>h1 {
+    font-size: 0;
+    height: var(--header-height);
+}
+
+header h1 a {
     color: #fff;
-    padding: 0 16px;
+    font-size: 36px;
+    font-weight: bold;
+    transition: all;
+    transition-duration: 0.3s;
+    letter-spacing: 0.1rem;
+}
+
+.nav li>a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    width: 50px;
+    line-height: 2rem;
+    text-align: center;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+header a:hover {
+    background-color: #eee;
+    color: #333;
+    opacity: 0.7;
+    border-radius: 16px;
+}
+
+/* メイン部分 */
+
+.container {
+    width: 100%;
+}
+
+/* index.htmlのトップカバー */
+.main-visual {
+    width: 100%;
+    position: relative;
+}
+
+.main-visual img {
+    object-fit: cover;
+}
+
+.contents {
+    max-width: var(--max-contents-widht);
+    padding: 0 16px 64px;
     margin: 0 auto;
 }
 
-.nav-list {
-    display: flex;
+.content {
+    margin-top: 64px;
 }
 
-.nav-list a {
-    font-size: 1rem;
-    line-height: 2;
-    padding: 0 4px;
+.content>h2 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+    margin-bottom: 16px;
 }
 
-header {
-    margin: 0 auto;
+.content.about,
+.content.news {
+    letter-spacing: 0.1rem;
+}
+
+.newsItem {
+    display: block;
+    margin-bottom: 8px;
+    border-bottom: 1px dotted #7e7e7e;
+    padding-bottom: 8px;
+}
+
+.newsItem span {
+    font-size: 14px;
+}
+
+.newsItem a {
+    display: inline;
+    color: #1A0DAB;
+    margin-bottom: 8px;
+}
+
+.newsItem a:hover {
+    border-bottom: solid 1.5px #1A0DAB;
+}
+
+.newsItem .category {
+    display: inline-block;
+    margin-left: 16px;
+    background-color: var(--site-color);
+    color: #fff;
+    width: 80px;
+    height: 20px;
     text-align: center;
+    border-radius: 10px;
 }
 
-footer {
+.newsItem .category.blogItem {
+    background-color: #00a9e0;
+}
+
+
+.content.news .newsItem:nth-child(-n+3)::before {
+    display: inline-block;
+    content: "new";
+    color: red;
+}
+
+.btn a {
+    display: block;
+    width: 150px;
     text-align: center;
-    margin: 80px 0 16px;
-    padding-top: 16px;
-    border-top: 1px solid#eee;
+    line-height: 40px;
+    background-color: var(--site-color);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 32px;
+    margin: 16px auto 0;
 }
 
-.sns-links {
+.btn a:hover {
+    opacity: 0.8;
+}
+
+/* photo */
+.photos {
     display: flex;
     gap: 16px;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+    overflow-x: scroll;
 }
 
-.fa-square-x-twitter,
-.fa-square-github,
-.fa-square-instagram {
-    font-size: 2rem;
+.photo img {
+    width: 200px;
+    user-select: none;
 }
 
-.fa-x-twitter {
-    font-size: 1.3rem;
-    line-height: 28px;
+/* profile */
+.profile-tbl {
+    letter-spacing: 0.1rem;
+    width: 100%;
+    max-width: 700px;
 }
 
-.share {
+.profile-tbl tr {
     display: block;
-    border: 1px solid rgb(51, 51, 51);
-    border-radius: 4px;
-    height: 28px;
+    line-height: 30px;
+    border-bottom: 1px dotted #7e7e7e;
 }
 
-.room {
-    height: 28px;
+.profile-tbl th {
+    width: 150px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background-color: #EFEFEF;
+    padding: 16px;
+}
+
+
+#footer-nav {
+    display: flex;
+    gap: 16px;
+}
+
+#footer-nav li a {
+    display: block;
+}
+
+#footer-nav a {
+    font-size: 12px;
+    color: #7E7E7E;
+}
+
+#footer-nav a:hover {
+    color: #333;
+    font-weight: bold;
+}
+
+
+footer .sns-links {
+    margin-top: 16px;
+    text-align: center;
+}
+
+footer .fa-brands {
+    font-size: 40px;
+    color: #333;
+    margin: 0 8px;
+}
+
+.sns>a:hover {
+    opacity: 0.7;
 }
 
 .room img {
-    width: 151.2px;
-    vertical-align: bottom;
-    height: 28px;
-    object-fit: contain;
-    vertical-align: baseline;
+    width: auto;
+    height: 40px;
+    margin-top: 16px;
 }
 
 .room img:hover {
     opacity: 0.7;
 }
 
-/* index */
-.main-visual img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.about,
-.news,
-.photo {
-    margin-top: 16px;
-}
-
-.news ul li {
-    display: flex;
-}
-
-.news a {
-    color:blue;
-    text-decoration: underline;
-}
-
-.news-date {
-    width: 128px;
-}
-
-.news-title {
-    width: 100%;
-}
-
-.visual-images {
-    display: flex;
-    gap: 8px;
-    overflow: scroll;
-}
-
-.visual-image img {
-    width: 200px;
-}
-
-
-/* profile */
-.profile-contents {
-    margin: 0 auto;
-    text-align: center;
-    padding: 16px 0 0;
-}
-
-.profile-contents .table {
-    padding-top: 16px;
-}
-
-.profile-contents .table th {
-    width: 100px;
-}
-
-.container.growth {
-    margin-top: 16px;
-}
-
-.growth-images {
-    display: flex;
-    gap: 8px;
-    overflow: scroll;
-    justify-content: space-between;
-}
-
-.growth-image img {
-    min-width: 200px;
-    max-width: 300px;
-}
-
-
-/* .blog */
-.blog-inner h2 {
-    margin-top: 16px;
-}
-
-.blog-inner a {
-    display: flex;
-    gap: 4%;
-}
-
-.blog-inner li {
+footer small {
+    font-size: 10px;
+    color: #7E7E7E;
     display: block;
-    line-height: 2;
-    border-bottom: 1px dotted #aaa;
+    text-align: center;
+    margin: 16px 16px 0;
 }
 
-.blog.container {
-    display: flex;
-    flex-direction: column-reverse;
+#sticky>a {
+    display: block;
+    text-align: center;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #fff;
+    background-color: var(--site-color);
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    transition: .3s;
 }
 
-.blog-inner {
+#sticky>a:hover {
+    box-shadow: 0 0 10px red;
+}
+
+
+/* blog.index,news.index */
+.mask {
     width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 1;
 }
 
-.blog-articles li:nth-child(-n+3)::before {
-  content: "new";
-  color: red;
+.site-index {
+    margin-top: 64px;
+    font-size: 24px;
+    letter-spacing: 0.1rem
 }
 
-.blog-ad {
-    margin-top: 16px;
-    width: 100%;
-    height: 100px;
-    background: #eee;
-    border-radius: 32px;
-    margin-bottom: 16px;
-}
-
-/* policy */
-.policy.container h2 {
-    margin-top: 16px;
-}
-
+/* privacy.html */
 .policy-content h3 {
-    font-size: 1rem;
-    border-bottom: 1px solid #aaa;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 50px;
 }
 
-.policy-content {
-    background-color: #eee;
-    padding: 8px;
-    border-radius: 8px;
+.policy-content p {
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+    line-height: 2;
 }
 
 .policy-content a {
-    color: blue;
-    text-decoration: underline;
+    color: #1A0DAB;
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+    line-height: 2;
 }
 
+.policy-content a:hover {
+    border-bottom: solid 1.5px #1A0DAB;
+}
+
+.page-title {
+    color: #fff;
+    font-size: 32px;
+    font-weight: normal;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* blog article */
+.blog-content {
+    margin-top: 32px;
+}
+
+.blog-content p {
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.05rem;
+    margin-top: 8px;
+}
+
+.blog-content aside {
+    margin-top: 18px;
+    font-weight: lighter;
+}
+
+.blog-img {
+    display: block;
+    width: 400px;
+    margin: 32px auto;
+}
+
+.page-move {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-move a {
+    display: block;
+    width: 100px;
+    height: 50px;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 32px;
+    background-color: #EFEFEF;
+    color: var(--site-color);
+    margin-bottom: 16px;
+}
+
+.blog-block {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 64px;
+}
+
+.blog-block .article {
+    width: calc((100% - 16px)/2);
+}
+
+.blog-block img {
+    width: 100%;
+}
+
+.blog-block img:hover {
+    opacity: 0.7
+}
 
 @media screen and (min-width:768px) {
-
-    /* common */
-    .nav-list li:hover {
-        background-color: #eee;
+    .photo img {
+        width: 300px;
     }
 
-    table {
-        font-size: 1rem;
+    .blog-content p {
+        font-size: 16px;
+        line-height: 2;
+        margin-top: 16px;
     }
 
-    /* index; */
-
-    .main-visual img {
-        object-fit: cover;
-        height: 300px;
+    .blog-block .article {
+        width: calc((100% - 64px)/4);
     }
+    
 
-    /* profile */
-    .profile-contents {
-        display: flex;
-        gap: 32px;
-    }
-
-    .profile-contents img {
-        max-width: 600px;
-    }
-
-    .profile-contents .table {
-        min-width: 50%;
-        padding-top: 0;
-    }
-
-
-    /* blog */
-
-    .blog.container {
-        display: flex;
-        flex-direction: unset;
-    }
-
-
-    .blog-ad {
-        width: 400px;
-        height: 500px;
-    }
 }
