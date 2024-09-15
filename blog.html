@@ -4,118 +4,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="2024年3月23日に迎え入れたスコティッシュフォールドのホームページを始めました。
-    名前は”コメ”と言います。可愛い”コメ”で癒されましょう。">
+    <meta name="description" content="長毛スコティッシュフォールド「コメちゃん」のホームページです。ふわふわ「コメちゃん」でぜひ癒されてください。
+        2024年3月23日に生後2ヶ月の子猫をお家に迎えました。家猫コメのホームページで猫についての情報発信をブログとして投稿しています。">
     <title>家猫コメ</title>
-    <meta name="description" content="家猫コメのホームページ">
     <!--twitter ogp setting -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@house_cat_kome" />
     <meta name="twitter:creator" content="@house_cat_kome" />
-    <meta property="og:url" content="https://mnaoki-github.github.io/kome_hp/" />
     <meta property="og:title" content="家猫コメのホームページ" />
+    <!-- <meta property="og:url" content="https://mnaoki-github.github.io/kome_hp/" /> -->
     <meta property="og:description" content="家猫コメのホームページです。" />
-    <meta property="og:image" content="https://mnaoki-github.github.io/kome_hp/img/ogp_image.jpg" />
-    <!-- fontawesome css -->
-    <link href="css/fontawesome/css/fontawesome.css" rel="stylesheet">
-    <link href="css/fontawesome/css/brands.css" rel="stylesheet">
-    <link href="css/fontawesome/css/solid.css" rel="stylesheet">
-
-    <link rel="icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- <meta property="og:image" content="https://mnaoki-github.github.io/kome_hp/img/ogp_image.jpg" /> -->
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XES12S9FCE"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-XES12S9FCE');
     </script>
+    <!-- 個別のリンクはjsで追加 -->
+    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
 </head>
 
 <body>
-    <header class="header">
-        <div class="title-wrapper">
-            <div class="title-inner">
-                <h1><a href="index.html">家猫コメ</a></h1>
-                <nav>
-                    <ul class="nav-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="policy.html">Policy</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="title-spacer"></div>
+    <header>
+        <!-- main.jsで作成 -->
     </header>
 
-    <div class="blog container">
-        <section class="blog-inner">
-            <!-- 最初の３件の記事にclass="new-blog"をつける -->
-            <h2>記事一覧</h2>
-            <ul class="blog-articles">
-                <li>
-                    <a href="blog/b5.html">
-                        <p>2024.09.07</p>
-                        <p>コメとの出会い</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="blog/b4.html">
-                        <p>2024.08.25</p>
-                        <p>コメの去勢2</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="blog/b3.html">
-                        <p>2024.08.17</p>
-                        <p>コメの去勢1</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="blog/b2.html">
-                        <p>2024.08.15</p>
-                        <p>コメです</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="blog/b1.html">
-                        <p>2024.08.12</p>
-                        <p>ブログ始めます</p>
-                    </a>
-                </li>
-            </ul>
-        </section>
+    <div class="container">
+        <div class="main-visual">
+            <img src="./img/blogcover.jpg" alt="">
+            <h2 class="page-title">Blog</h2>
+            <div class="mask"></div>
+        </div>
 
-        <section class="blog-ad"></section>
-        
+        <div class="contents">
+            <div class="site-index">
+                <a href="./index.html">Home</a>
+                <span>&gt;</span>
+                <span>Blog</span>
+            </div>
+
+            <section class="content-blog">
+                <ul class="newsList">
+                    <li class="newsItem">
+                        <div>
+                            <span class="date">2024.09.07</span>
+                            <span class="category blogItem">blog</span>
+                        </div>
+                        <a class="blog-link" href="./blog/b5.html">コメとの出会い</a>
+                    </li>
+                    <li class="newsItem">
+                        <div>
+                            <span class="date">2024.08.25</span>
+                            <span class="category blogItem">blog</span>
+                        </div>
+                        <a class="blog-link" href="./blog/b4.html">コメの去勢2</a>
+                    </li>
+                    <li class="newsItem">
+                        <div>
+                            <span class="date">2024.08.17</span>
+                            <span class="category blogItem">blog</span>
+                        </div>
+                        <a class="blog-link" href="./blog/b3.html">コメの去勢1</a>
+                    </li>
+                    <li class="newsItem">
+                        <div>
+                            <span class="date">2024.08.15</span>
+                            <span class="category blogItem">blog</span>
+                        </div>
+                        <a class="blog-link" href="./blog/b2.html">コメです</a>
+                    </li>
+                    <li class="newsItem">
+                        <div>
+                            <span class="date">2024.08.12</span>
+                            <span class="category blogItem">blog</span>
+                        </div>
+                        <a class="blog-link" href="./blog/b1.html">ブログ始めます</a>
+                    </li>
+                </ul>
+                <!-- <div class="btn"><a href="./news.html">More<i class="fa-solid fa-angles-right"></i></a></div> -->
+            </section>
+
+            <section class="blog-block">
+                <div class="article">
+                    <a class="article-link" href="./blog/b5.html"><img src="./img/blog/b5-1.jpg" alt=""></a>
+                    <span class="article-title">コメとの出会い</span>
+                </div>
+                <div class="article">
+                    <a class="article-link" href="./blog/b4.html"><img src="./img/blog/b4-1.jpg" alt=""></a>
+                    <span class="article-title">コメの去勢2</span>
+                </div>
+                <div class="article">
+                    <a class="article-link" href="./blog/b3.html"><img src="./img/blog/b3-1.jpg" alt=""></a>
+                    <span class="article-title">コメの去勢1</span>
+                </div>
+                <div class="article">
+                    <a class="article-link" href="./blog/b2.html"><img src="./img/blog/b2-1.jpg" alt=""></a>
+                    <span class="article-title">コメです</span>
+                </div>
+            </section>
+
+        </div>
+
     </div>
 
     <footer>
-        <div class="menu">
-            <div class="sns-links">
-                <a href="https://x.com/house_cat_kome" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
-                <a href="https://www.instagram.com/stay_with_kome?igsh=OGE0cjl3ODZ0YnVz" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="https://github.com/mnaoki-github/kome_hp" target="_blank"><i
-                        class="fa-brands fa-square-github"></i></a>
-                <a class="room" href="https://room.rakuten.co.jp/room_3080d29532/items" target="_blank">
-                    <img src="https://room.rakuten.co.jp/campaign/bnr/common/myroom_banner.png">
-                </a>
-                <a class="share"
-                    href="http://twitter.com/share?url=https://mnaoki-github.github.io/kome_hp&text=家猫コメのホームページです。&hashtags=家猫コメ,猫,猫のいる暮らし,スコティッシュフォールド,scottishfold"
-                    target="_blank"><i class="fa-brands fa-x-twitter"></i><span>でシェア</span></a>
-            </div>
+        <div>
+            <ul id="footer-nav">
+                <!-- main.jsで追加 -->
+            </ul>
+        </div>
+        <div class="sns-links">
+            <ul>
+                <li class="sns"><a href="https://x.com/house_cat_kome" target="_blank"><i
+                            class="fa-brands fa-square-x-twitter"></i></a></li>
+                <li class="sns"><a href="https://www.instagram.com/stay_with_kome?igsh=OGE0cjl3ODZ0YnVz"
+                        target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
+                <li class="sns"><a href="https://github.com/mnaoki-github/kome_hp" target="_blank"><i
+                            class="fa-brands fa-square-github"></i></a></li>
+            </ul>
+            <ul>
+                <li><a class="room" href="https://room.rakuten.co.jp/room_3080d29532/items" target="_blank">
+                        <img src="https://room.rakuten.co.jp/campaign/bnr/common/myroom_banner.png"></li>
+            </ul>
         </div>
         <small>&copy; House Cat Kome</small>
     </footer>
+
+    <div id="sticky">
+        <!-- main.jsで追加 -->
+    </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
