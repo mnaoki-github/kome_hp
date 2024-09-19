@@ -12,8 +12,8 @@
     // ドメイン名
     const domainName = 'https://mnaoki-github.github.io';
     // メインフォルダ名
-    // const rootFolderName = domainName + '/kome_hp';
-    const rootFolderName = 'http://127.0.0.1:5500';
+    const rootFolderName = domainName + '/kome_hp';
+    // const rootFolderName = 'http://127.0.0.1:5500';
 
     // headタグ
     const head = document.querySelector('head');
@@ -192,11 +192,11 @@
         });
 
         // 初期リスト作成
-        mkList(cnt, listData, '#news-list');
-        mkList(cntBlog, blogList, '#blog-list');
+        mkList(cnt, listData,'#news-list');
+        mkList(cntBlog, blogList,'#blog-list');
     };
 
-    function mkList(j, data, idName) {
+    function mkList(j, data,idName) {
         const ul = document.querySelector(idName);
 
         if (ul === null) {
@@ -204,8 +204,8 @@
         }
 
         for (let i = j; i < j + 5; i++) {
-            if (i === data.length - 1) {
-                const clickBtn = document.querySelector('.btn');
+            if (i === data.length-1) {
+                const clickBtn=document.querySelector('.btn');
                 clickBtn.classList.add('hide');
             }
             if (i === data.length) {
@@ -241,7 +241,7 @@
             ul.appendChild(li);
         };
         cnt += 5;
-        cntBlog += 5;
+        cntBlog +=5;
     }
 
     // newsのbtnクリックで表示増やす
@@ -252,7 +252,7 @@
         }
 
         openBtn.addEventListener('click', () => {
-            mkList(cnt, listData, '#news-list');
+            mkList(cnt, listData,'#news-list');
         })
     };
 
@@ -263,7 +263,7 @@
             return;
         }
         openBtn.addEventListener('click', () => {
-            mkList(cntBlog, blogList, '#blog-list');
+            mkList(cntBlog, blogList,'#blog-list');
         })
     };
 
