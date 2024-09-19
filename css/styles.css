@@ -132,7 +132,7 @@ header a:hover {
 }
 
 .newsItem span {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .newsItem a {
@@ -167,7 +167,8 @@ header a:hover {
     color: red;
 }
 
-.btn a {
+.btn,
+.btn a  {
     display: block;
     width: 150px;
     text-align: center;
@@ -179,8 +180,14 @@ header a:hover {
     margin: 16px auto 0;
 }
 
+.btn:hover,
 .btn a:hover {
+    cursor: pointer;
     opacity: 0.8;
+}
+
+.btn.hide{
+    display: none;
 }
 
 /* photo */
