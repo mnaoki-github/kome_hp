@@ -192,11 +192,13 @@
         });
 
         // 初期リスト作成
-        mkList(cnt, listData,'#news-list');
-        mkList(cntBlog, blogList,'#blog-list');
+        mkList(cnt, listData, '#news-list');
+        mkList(cntBlog, blogList, '#blog-list');
+
+        mkTop4Blog(blogList);
     };
 
-    function mkList(j, data,idName) {
+    function mkList(j, data, idName) {
         const ul = document.querySelector(idName);
 
         if (ul === null) {
@@ -204,8 +206,8 @@
         }
 
         for (let i = j; i < j + 5; i++) {
-            if (i === data.length-1) {
-                const clickBtn=document.querySelector('.btn');
+            if (i === data.length - 1) {
+                const clickBtn = document.querySelector('.btn');
                 clickBtn.classList.add('hide');
             }
             if (i === data.length) {
@@ -241,7 +243,7 @@
             ul.appendChild(li);
         };
         cnt += 5;
-        cntBlog +=5;
+        cntBlog += 5;
     }
 
     // newsのbtnクリックで表示増やす
@@ -252,7 +254,7 @@
         }
 
         openBtn.addEventListener('click', () => {
-            mkList(cnt, listData,'#news-list');
+            mkList(cnt, listData, '#news-list');
         })
     };
 
@@ -263,12 +265,43 @@
             return;
         }
         openBtn.addEventListener('click', () => {
-            mkList(cntBlog, blogList,'#blog-list');
+            mkList(cntBlog, blogList, '#blog-list');
         })
     };
+
+
+    function mkTop4Blog(lists) {
+        const sectionElment = document.querySelector('.blog-block');
+        if (sectionElment === null) {
+            return;
+        }
+
+        for (let i = 0; i < 4; i++) {
+            const divElement = document.createElement('div');
+            const aElement = document.createElement('a');
+            const imgElement =document.createElement('img');
+            const spanElement =document.createElement('span');
+
+            divElement.classList.add('article');
+            aElement.classList.add('article-link');
+            aElement.href ='./blog/' +lists[i].file;
+            imgElement.src='./img/blog/'+ lists[i].file.replace('.html','-1.jpg');
+
+            spanElement.classList.add('article-title');
+            spanElement.textContent=lists[i].title;
+
+            aElement.appendChild(imgElement);
+            
+            divElement.appendChild(aElement);
+            divElement.appendChild(spanElement);
+
+            sectionElment.appendChild(divElement);
+        }
+
+    };
+
 
     getNewsData();
     listAdd();
     blogListAdd();
-
 }
