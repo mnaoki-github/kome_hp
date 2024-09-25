@@ -3,7 +3,7 @@
 /* initialize */
 :root {
     --max-contents-widht: 1280px;
-    --header-height: 50px;
+    --header-height: 36px;
     --site-color: #EDA65F;
 }
 
@@ -61,7 +61,7 @@ header>h1 {
 
 header h1 a {
     color: #fff;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: bold;
     transition: all;
     transition-duration: 0.3s;
@@ -171,7 +171,7 @@ header a:hover {
 .btn,
 .btn a  {
     display: block;
-    width: 150px;
+    width: 120px;
     text-align: center;
     line-height: 40px;
     background-color: var(--site-color);
@@ -186,6 +186,7 @@ header a:hover {
     cursor: pointer;
     opacity: 0.8;
 }
+
 
 .btn.hide{
     display: none;
@@ -363,6 +364,10 @@ footer small {
     margin-top: 32px;
 }
 
+.blog-date {
+    border-bottom: solid 2px #fff;
+}
+
 .blog-content p {
     font-size: 14px;
     line-height: 1.8;
@@ -377,8 +382,16 @@ footer small {
 
 .blog-img {
     display: block;
-    width: 400px;
+    width: 300px;
     margin: 32px auto;
+    box-shadow: #000 0px 0px 10px;
+    border-radius: 24px;
+}
+
+.blog-area{
+    padding:16px;
+    background-color: #f7e9d5;
+    border-radius: 32px;
 }
 
 .page-move {
@@ -410,7 +423,11 @@ footer small {
 }
 
 .blog-block img {
+    display: block;
+    margin-bottom: 16px;
     width: 100%;
+    box-shadow: #000 0px 0px 5px;
+    border-radius: 24px;
 }
 
 .blog-block img:hover {
@@ -418,6 +435,19 @@ footer small {
 }
 
 @media screen and (min-width:768px) {
+    header{
+        height: 50px;
+    }
+
+    header h1 {
+        height: 50px;
+    }
+
+    header h1 a {
+        font-size: 36px;
+        line-height: 50px;
+    }
+
     .photo img {
         width: 300px;
     }
@@ -432,5 +462,8 @@ footer small {
         width: calc((100% - 64px)/4);
     }
     
+    .blog-img {
+        width: 400px;
+    }
 
 }

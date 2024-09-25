@@ -67,11 +67,11 @@
         const metaOgImg = document.createElement('meta');
         metaOgImg.setAttribute('property', 'og:image');
 
-        if (filePath.startsWith('b')) {
-            metaOgImg.content = rootFolderName + '/img/blog/' + filePath.split('.').shift() + '-1.jpg';
-        } else {
+        // if (filePath.startsWith('b')) {
+            // metaOgImg.content = rootFolderName + '/img/blog/' + filePath.split('.').shift() + '-1.jpg';
+        // } else {
             metaOgImg.content = rootFolderName + '/img/' + 'ogp_image.jpg';
-        }
+        // }
 
         head.appendChild(metaOgImg);
 
