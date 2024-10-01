@@ -12,8 +12,8 @@
     // ドメイン名
     const domainName = 'https://mnaoki-github.github.io';
     // メインフォルダ名
-    // const rootFolderName = domainName + '/kome_hp';
-    const rootFolderName = 'http://127.0.0.1:5500';
+    const rootFolderName = domainName + '/kome_hp';
+    // const rootFolderName = 'http://127.0.0.1:5500';
 
     // headタグ
     const head = document.querySelector('head');
