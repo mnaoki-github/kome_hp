@@ -11,9 +11,13 @@
 
     // ドメイン名
     const domainName = 'https://mnaoki-github.github.io';
+    let rootFolderName='';
     // メインフォルダ名
-    const rootFolderName = domainName + '/kome_hp';
-    // const rootFolderName = 'http://127.0.0.1:5500';
+    if (window.location.hostname.includes('127.0.0.1')) {
+        rootFolderName = 'http://127.0.0.1:5500';
+    } else {
+        rootFolderName = domainName + '/kome_hp';
+    }
 
     // headタグ
     const head = document.querySelector('head');
@@ -68,9 +72,9 @@
         metaOgImg.setAttribute('property', 'og:image');
 
         // if (filePath.startsWith('b')) {
-            // metaOgImg.content = rootFolderName + '/img/blog/' + filePath.split('.').shift() + '-1.jpg';
+        // metaOgImg.content = rootFolderName + '/img/blog/' + filePath.split('.').shift() + '-1.jpg';
         // } else {
-            metaOgImg.content = rootFolderName + '/img/' + 'ogp_image.jpg';
+        metaOgImg.content = rootFolderName + '/img/' + 'ogp_image.jpg';
         // }
 
         head.appendChild(metaOgImg);
@@ -279,19 +283,19 @@
         for (let i = 0; i < 4; i++) {
             const divElement = document.createElement('div');
             const aElement = document.createElement('a');
-            const imgElement =document.createElement('img');
-            const spanElement =document.createElement('span');
+            const imgElement = document.createElement('img');
+            const spanElement = document.createElement('span');
 
             divElement.classList.add('article');
             aElement.classList.add('article-link');
-            aElement.href ='./blog/' +lists[i].file;
-            imgElement.src='./img/blog/'+ lists[i].file.replace('.html','-1.jpg');
+            aElement.href = './blog/' + lists[i].file;
+            imgElement.src = './img/blog/' + lists[i].file.replace('.html', '-1.jpg');
 
             spanElement.classList.add('article-title');
-            spanElement.textContent=lists[i].title;
+            spanElement.textContent = lists[i].title;
 
             aElement.appendChild(imgElement);
-            
+
             divElement.appendChild(aElement);
             divElement.appendChild(spanElement);
 
