@@ -52,7 +52,7 @@
     };
 
     function metaOgUrlElement() {
-        const filePath = window.location.pathname;
+        const filePath = window.location.pathname.split('/').pop();
         const metaOgUrl = document.createElement('meta');
         metaOgUrl.setAttribute('property', 'og:url');
 
