@@ -6,7 +6,7 @@
         makeFaviconElement();
         makeStyleElements();
         metaOgUrlElement();
-        metaOgImgElement();
+        // metaOgImgElement();
     };
 
     // ドメイン名
